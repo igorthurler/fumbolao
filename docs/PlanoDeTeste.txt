@@ -1,0 +1,108 @@
+Teste Fumbolão
+
+Criar 2 participantes:
+participante_a@teste.com.br (Participante A)
+participante_b@teste.com.br (Participante B)
+
+Criar 4 Times:
+Time 1
+Time 2
+Time 3
+Time 4
+
+Criar partidas:
+Time 1 x Time 2
+Time 3 x Time 4
+
+Cenário de teste 1 (Aposta normal):
+-----------------------------------
+Participante A aposta na derrota do time 1
+Participante A aposta na derrota do time 4
+Participante B aposta na derrota do time 2
+Participante B aposta na derrota do time 3
+
+Resultado das partidas (Sem bônus):
+Time 1 [10] x Time 2 [13]
+Time 3 [10] x Time 4 [09]
+
+Resultado: 
+O participante A ganha 1 ponto no jogo 1.
+O participante A ganha 1 ponto no jogo 2.
+O participante B perde 1 ponto no jogo 1.
+O participante B perde 1 ponto no jogo 2.
+
+Cenário de teste 2 (Bônus RR):
+------------------------------
+Participante A aposta na derrota do time 1 (RR).
+Participante A aposta na derrota do time 4.
+Participante B aposta na derrota do time 2.
+Participante B aposta na derrota do time 3 (RR).
+
+Resultado das partidas (Ganhando bônus RR):
+Time 1 [15] x Time 2 [35]
+Time 3 [10] x Time 4 [30]
+
+Resultado:
+1- O participante A pontua no jogo 1 com 3 pontos de bônus.
+2- O participante A perde ponto no jogo 2.
+3- O participante B perde ponto no jogo 1.
+4- O participante B pontua no jogo 2 com 3 pontos de bônus.
+
+Resultado das partidas (Perdendo bônus RR):
+Time 1 [35] x Time 2 [15]
+Time 3 [30] x Time 4 [10]
+
+Resultado:
+1- O participante A perde 1 ponto no jogo 1 com -3 pontos de bônus.
+2- O participante A ganha 1 ponto no jogo 2.
+3- O participante B perde 1 ponto no jogo 2.
+4- O participante B perde 1 ponto no jogo 2 com -3 pontos de bônus.
+
+Cenário de teste 2 (Bônus AH):
+------------------------------
+Participante A aposta na derrota do time 1 (AH)
+Participante A aposta na derrota do time 4 
+Participante B aposta na derrota do time 2 
+Participante B aposta na derrota do time 3 (AH)
+
+Resultado das partidas (Ganhando bônus AH):
+Time 1 [15] x Time 2 [45]
+Time 3 [10] x Time 4 [40]
+
+Resultado:
+O participante A pontua no jogo 1 com 5 pontos de bônus
+O participante B pontua no jogo 2 com 5 pontos de bônus
+
+Resultado das partidas (Perdendo bônus AH):
+Time 1 [45] x Time 2 [15]
+Time 3 [40] x Time 4 [10]
+
+Resultado:
+O participante A perde 1 ponto no jogo 1 com -5 pontos de bônus
+O participante B perde 1 ponto no jogo 2 com -5 pontos de bônus
+
+Cenário de teste 3 (Bônus OJ):
+------------------------------
+Participante A aposta na derrota do time 1 (OJ)
+Participante A aposta na derrota do time 4 
+Participante B aposta na derrota do time 2 
+Participante B aposta na derrota do time 3 (OJ)
+
+Resultado das partidas (Ganhando bônus AH):
+Time 1 [15] x Time 2 [55]
+Time 3 [10] x Time 4 [50]
+
+Resultado:
+1- O participante A pontua no jogo 1 com 7 pontos de bônus
+2- O participante A perde 1 ponto na segunda partida.
+3- O participante B perde 1 ponto na primeira partida.
+4- O participante B pontua no jogo 2 com 7 pontos de bônus
+
+Resultado das partidas (Perdendo bônus AH):
+Time 1 [55] x Time 2 [15]
+Time 3 [50] x Time 4 [10]
+
+Resultado:
+O participante A perde 1 ponto no jogo 1 com -7 pontos de bônus
+O participante B perde 1 ponto no jogo 2 com -7 pontos de bônus
+
