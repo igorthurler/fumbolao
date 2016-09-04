@@ -10,8 +10,7 @@
 			<p class="back-top"><a href="index.php">↑</a></p>
 			-->
 			<div class="footer-text clearfix">
-				<div class="one">© <a href="#">Basic</a> 2012</div>
-				<div class="two">Designed by <a href="http://themify.me/">Themify</a></div>
+				<div class="one"><a href="www.fumblecast.com.br">Fumblecast</a> 2016</div>
 			</div>
 			<!-- /footer-text --> 
 	

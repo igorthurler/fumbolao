@@ -15,7 +15,7 @@ $dadosParticipante = $queryParticipante->fetch_array();
 
 if ($dadosParticipante == null) {
 	echo 'Participante não cadastrado <br/>';
-    echo "<a href=\"index.php\">Principal</a>";	
+    echo "<a href=\"index\">Principal</a>";	
 	exit;
 } 
 // ---------------------------------------------------
@@ -34,7 +34,7 @@ $dadosPalpiteUsuario = $queryPalpiteUsuario->fetch_array();
 
 if ($dadosPalpiteUsuario['quant_palpite'] > 0) {
 	echo "O participante informado já deu seus palpites para a rodada {$rodada} <br/>";
-    echo "<a href=\"index.php\">Voltar</a>";	
+    echo "<a href=\"index\">Voltar</a>";	
 	exit;	
 }
 // ---------------------------------------------------
@@ -81,4 +81,4 @@ mail($emailParticipante, "{$dadosBolao} rodada {$rodada}", $msg, $header);
 
 echo "Palpites cadastrado com sucesso. <br/>";
 echo "Seus palpites foram enviados para o email cadastrado({$emailParticipante}). <br/>";
-echo "<a href=\"index.php\">Principal</a>";	
+echo "<a href=\"index\">Principal</a>";	

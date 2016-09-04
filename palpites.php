@@ -1,13 +1,6 @@
 <?php
 
 include 'connection.php';
-/*
-$query = $con->query("select id, descricao from Bolao where ativo = true");
-
-$dados = $query->fetch_array();
-
-$bolao = $dados['id'];
-*/
 
 $bolao = $GET['bolao'];
 

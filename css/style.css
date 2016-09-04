@@ -115,7 +115,7 @@ input, textarea, select, input[type=search], button {
 	font-size: 100%;
 	font-family: inherit;
 }
-input[type=text], input[type=password], textarea, input[type=search] {
+input[type=text], input[type=password], textarea, select, input[type=search] {
 	background: #f3f3f3;
 	border: solid 1px #ddd;
 	padding: 6px 10px;

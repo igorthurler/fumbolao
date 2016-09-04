@@ -1,16 +1,16 @@
 use fw_bolao;
 
+create table Bolao(
+    id int(11) not null auto_increment primary key,
+    descricao varchar(30) not null,
+	ativo tinyint(1) not null default 0
+);
+
 create table Participante(
     id int(11) not null auto_increment primary key,
     nome varchar(100) not null,
     email varchar(100) not null unique,
     torcedor_time varchar(30) not null
-);
-
-create table Bolao(
-    id int(11) not null auto_increment primary key,
-    descricao varchar(30) not null,
-	ativo tinyint(1) not null default 0
 );
 
 create table Partida(

@@ -3,10 +3,16 @@
 
 	<title><?php echo $title ?></title>
 
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery.validate.js"></script>	
+	<!--
+	<script src="js/fumbolao.js"></script>
+	-->
 
 	<!-- header -->
 	<link rel="stylesheet" id="themify-styles-css" href="css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" id="themify-media-queries-css" href="css/media-queries.css" type="text/css" media="all">
+	<link rel="stylesheet" id="themify-styles-css" href="css/fumbolao.css" type="text/css" media="all">
 
 	<!-- media-queries.js -->
 	<!--[if lt IE 9]>

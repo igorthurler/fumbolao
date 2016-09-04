@@ -95,4 +95,5 @@ select vpp.bolao,
 	   sum(vpp.soma_bonus) as bonus,
 	   sum(vpp.soma_total) as total
   from	vw_pontos_participante vpp  
- group by vpp.bolao, vpp.nome_participante;
+ group by vpp.bolao, vpp.nome_participante
+ order by sum(vpp.soma_total) desc, sum(vpp.soma_bonus) desc, nome_participante;

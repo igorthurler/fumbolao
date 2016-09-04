@@ -4,14 +4,15 @@
 		<ul class="feature-posts-list">
 		
 			<?php		
-				// Retornar dados do ranking 
-				$queryRanking = $con->query("select * from vw_ranking
-											  where bolao = {$bolao}
-											  order by total desc,bonus desc, nome_participante
-											  limit 5");			
+				// Retornar dados do ranking 		
+				$queryRanking = $con->prepare("select * from vw_ranking
+												where bolao = :bolao
+												limit 5");
+				$queryRanking->bindParam( ':bolao', $bolao );
+				$queryRanking->execute();			
 			
 				if ($queryRanking != null) {
-					while ($ranking = $queryRanking->fetch_array()) {
+					while ($ranking = $queryRanking->fetchAll( PDO::FETCH_ASSOC )) {
 					  if ($ranking['total'] <> 0) 
 						echo "<li><label>{$ranking['nome_participante']} ({$ranking['total']} pts)</label></li>";
 					}

@@ -1,9 +1,9 @@
 <?php
-$bolao = 1;
-
 include 'connection.php';
 
-$query = $con->query("select descricao from Bolao");
+$bolao = $GET['bolao'];
+
+$query = $con->query("select descricao from Bolao where id = {$bolao}");
 
 $dados = $query->fetch_array();
             
