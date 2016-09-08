@@ -95,7 +95,7 @@ $header = "MIME-Version: 1.0\r\n";
 $header .= "Content-Type: text/html; charset=iso-8859-1\r\n";
 $header .= "From:fumbolao <contato@fumblecast.com.br>";
 
-$msg = "<h2>{$queryBolao['descricao']}</h2><br/>
+$msg = "<h2>{$dadosBolao['descricao']}</h2><br/>
 Prezado(a) {$dadosParticipante['nome']}, seus palpites para a rodada {$rodada} foram: <br/>
 {$palpitesMsg}";
 
