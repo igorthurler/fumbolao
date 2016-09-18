@@ -52,7 +52,7 @@ try {
 	$queryBolao->execute();
 	$dadosBolao = $queryBolao->fetch(PDO::FETCH_ASSOC);	
 	
-	// Envia email confirmando o cadastro do participante.	
+	// Envia email confirmando o cadastro do participante.
 	$header = "MIME-Version: 1.0\r\n";
 	$header .= "Content-Type: text/html; charset=iso-8859-1\r\n";
 	$header .= "From:fumbolao <contato@fumblecast.com.br>";
@@ -64,7 +64,6 @@ try {
 
 	mail($email, "Cadastro {$dadosBolao['descricao']}", $msg, $header);
 	// ---------------------------------------------------
-	
 	
 	echo utf8_decode("Cadastro realizado com sucesso. <br/>
 	                  Enviamos uma confirmação para o email cadastrado({$email}). <br/>

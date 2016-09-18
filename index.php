@@ -82,8 +82,8 @@ $partidas = $queryPartidas->fetchAll( PDO::FETCH_ASSOC );
 									
 										if (count($partidas)){ 
 											foreach ($partidas as $partida) {
-												//$desabilita  = ($partida['diff_datas'] <= '10') ? 'disabled' : '';	
-												$desabilita  = '';
+												$desabilita  = ($partida['diff_datas'] <= '10') ? 'disabled' : '';	
+												//$desabilita  = '';
 						
 												echo "<li>{$partida['time_visitante']}
 															<input type=\"radio\" name=\"partida_{$partida['id']}\" id=\"partida_{$partida['id']}\" value=\"{$partida['time_visitante']}\" {$desabilita}/> @ 

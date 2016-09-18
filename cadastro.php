@@ -106,7 +106,6 @@ $title = isset($dadosBolao['descricao']) && ($dadosBolao['descricao'] != '') ? $
 									<option value="STL">STL</option>																																																																					
 									<option value="TEN">TEN</option>
 									<option value="WAS">WAS</option>														
-									<option value="LA">LA</option>				
 								  </select> 
 							</li>
 							<input type="submit" id="enviar" value="Cadastrar"/>
