@@ -1,37 +1,69 @@
 <?php
 include 'connection.php';
 
-$bolao = $GET['bolao'];
+$queryBolao = $con->prepare("select id, descricao from Bolao where ativo = true");
+$queryBolao->execute();   
+$dadosBolao = $queryBolao->fetch(PDO::FETCH_ASSOC);
 
-$query = $con->query("select descricao from Bolao where id = {$bolao}");
+$bolao = isset($dadosBolao['id']) && ($dadosBolao['id'] != '') ? $dadosBolao['id'] : 0;
+$title = isset($dadosBolao['descricao']) && ($dadosBolao['descricao'] != '') ? $dadosBolao['descricao'] : 'Fumbol達o';
 
-$dados = $query->fetch_array();
+$query = $con->prepare("select descricao from Bolao where id = :bolao");
+$query->bindParam( ':bolao', $bolao, PDO::PARAM_INT );
+$query->execute();
+
+$dados = $query->fetch(PDO::FETCH_ASSOC);
             
 // Retornar dados do ranking 
-$queryRanking = $con->query("select * from vw_ranking
-where bolao = {$bolao}
+$queryRanking = $con->prepare("select * from vw_ranking
+where bolao = :bolao
 order by total desc,bonus desc, nome_participante");
-                              
+$queryRanking->bindParam( ':bolao', $bolao, PDO::PARAM_INT );
+$queryRanking->execute();
+
 ?>
 <!DOCTYPE html>
 <html>
-    <?php include 'templates/header.php'; ?>
-    <body>
-        <div id="BoxForm">
-                <h1><?php echo $dados['descricao'] ?></h1>
-		  <fieldset>
-			<legend><span>Ranking</span></legend>
-			<ul>
+
+<?php include 'templates/header.php'; ?>
+	
+<body class="home blog">
+
+	<div id="pagewrap">
+		
+		<?php include 'templates/top.php'; ?>
+
+		<div id="body" class="clearfix"> 
+			
+			<!-- layout -->
+			<div id="layout" class="pagewidth clearfix sidebar1">	
+				
+				<div id="content">				
+					<!-- 
+						Conteúdo aqui
+					-->				
 			  <?php
 				if ($queryRanking != null) {
-					while ($ranking = $queryRanking->fetch_array()) {
+foreach($queryRanking->fetchAll( PDO::FETCH_ASSOC ) as $ranking) {
 						echo "<li><label>{$ranking['nome_participante']} ({$ranking['total']} pts)</label></li>";
 					}
 				}
-			  ?>      
-			</ul>
-		  </fieldset>
-        </div>
-
-    </body>
+			  ?>  				
+				</div>
+				<!-- /#content -->			
+				<?php /*include 'templates/sidebar.php';*/ ?>
+				
+				
+			</div>
+			<!-- /#layout -->		
+			
+		</div>
+		<!-- /body -->	
+		
+		<?php include 'templates/footer.php'; ?>
+		
+	</div>
+    <!-- /#pagewrap -->
+	
+</body>
 </html>	
