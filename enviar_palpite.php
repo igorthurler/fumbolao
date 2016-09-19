@@ -7,20 +7,20 @@ $rodada = $_GET['rodada'];
 $bolao = $_GET['bolao'];
 $emailParticipante = $_POST['emailParticipante'];
 
-// Verificar se o email informado È de um participante
+// Verificar se o email informado √© de um participante
 // ---------------------------------------------------
 $queryParticipante = $con->query("select id, nome, email from Participante where email = '{$emailParticipante}'");
 
 $dadosParticipante = $queryParticipante->fetch_array();
 
 if ($dadosParticipante == null) {
-	echo 'Participante n„o cadastrado <br/>';
+	echo 'Participante n√£o cadastrado <br/>';
     echo "<a href=\"index\">Principal</a>";	
 	exit;
 } 
 // ---------------------------------------------------
 
-// Verificar se o participante j· deu palpites;
+// Verificar se o participante j√° deu palpites;
 $idParticipante = $dadosParticipante['id'];
 
 $queryPalpiteUsuario = $con->query("select count(pp.id) as quant_palpite
@@ -33,7 +33,7 @@ $queryPalpiteUsuario = $con->query("select count(pp.id) as quant_palpite
 $dadosPalpiteUsuario = $queryPalpiteUsuario->fetch_array();
 
 if ($dadosPalpiteUsuario['quant_palpite'] > 0) {
-	echo "O participante informado j· deu seus palpites para a rodada {$rodada} <br/>";
+	echo "O participante informado j√° deu seus palpites para a rodada {$rodada} <br/>";
     echo "<a href=\"index\">Voltar</a>";	
 	exit;	
 }
@@ -53,7 +53,7 @@ $data = date("Y-m-d H:i:s");
 while ($dadosPartidas = $queryPartidas->fetch_array()) {
 	$idPartida = $dadosPartidas['id'];
 	$timePalpite = isset($_POST['partida_'.$idPartida]) && $_POST['partida_'.$idPartida] != '' ? $_POST['partida_'.$idPartida] : 'null';
-	// TODO: Utilizar funÁ„o para colocar aspas em uma string
+	// TODO: Utilizar funbol√£o para colocar aspas em uma string
 	$bonus = isset($_POST['bonus_partida_'.$idPartida]) && $_POST['bonus_partida_'.$idPartida] != '' ? "'".$_POST['bonus_partida_'.$idPartida]."'" : 'null';
 	
 	$sql = "insert into Palpite(data_hora,participante,partida,time_palpite,bonus)values('{$data}',{$idParticipante},{$idPartida},'{$timePalpite}',{$bonus})";
@@ -72,7 +72,7 @@ $header = "MIME-Version: 1.0\r\n";
 $header .= "Content-Type: text/html; charset=iso-8859-1\r\n";
 $header .= "From:fumbolao <contato@fumblecast.com.br>";
 
-$msg = "<h2>Fumbol„o 2015/2016 </h2><br/>
+$msg = "<h2>Fumbol√£o 2015/2016 </h2><br/>
 Prezado(a) {$dadosParticipante['nome']}, seus palpites para a rodada {$rodada} foram: <br/>
 {$palpitesMsg}";
 
