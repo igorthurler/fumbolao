@@ -32,18 +32,19 @@ select vrr.bolao,
        prt.id as id_participante,
        prt.nome as nome_participante,
        prt.email as email_participante,
-	   ppt.torcedor_time as time_participante,
+	   prt.torcedor_time as time_participante,
 	   vrr.time_visitante as time_visitante,
 	   vrr.placar_time_visitante as placar_time_visitante,
        vrr.time_casa as time_casa, 
        vrr.placar_time_casa as placar_time_casa,
        ppt.time_palpite as aposta_participante,
        vrr.resultado,
-            /*Se não for jogo do time do participante e ele não deu palpite, perde 1 ponto*/	   
-       case when (((ppt.time_visitante <> prt.torcedor_time) and (ppt.time_casa <> prt.torcedor_time)) and ppt.time_palpite is null) then -1
+	   
+       /*Se não for jogo do time do participante e ele não deu palpite, perde 1 ponto*/	   
+       case when (((vrr.time_visitante <> prt.torcedor_time) and (vrr.time_casa <> prt.torcedor_time)) and ppt.time_palpite is null) then -1
 			/*Se for jogo do time do participante e ele não apostou no seu time, perde 5 pontos*/
-	        case when (
-			                ((ppt.time_visitante = prt.torcedor_time) or (ppt.time_casa = prt.torcedor_time)) 
+	         when (
+			                ((vrr.time_visitante = prt.torcedor_time) or (vrr.time_casa = prt.torcedor_time)) 
 						and ((ppt.time_palpite is null) or (ppt.time_palpite <> prt.torcedor_time))
 			           ) then -5
 	        /*Se o time que o participante apostou perder, ganha 1 ponto*/
@@ -52,7 +53,8 @@ select vrr.bolao,
 			when (vrr.resultado = ppt.time_palpite) and (vrr.resultado <> 'EMPATE') then -1	
 			else 0
        end as pontos,
-	        /*Se o time que o participante apostou perdeu e o participante acertou o bônus, ele ganha ponto*/
+	   
+	   /*Se o time que o participante apostou perdeu e o participante acertou o bônus, ele ganha ponto*/
        case when (ppt.time_palpite is null) then 0
 	        when (vrr.resultado <> 'EMPATE') and (vrr.resultado <> ppt.time_palpite) and (binary ppt.bonus = vrr.bonus) and (binary vrr.bonus = 'RR') then 3
             when (vrr.resultado <> 'EMPATE') and (vrr.resultado <> ppt.time_palpite) and (binary ppt.bonus = vrr.bonus) and (binary vrr.bonus = 'AH') then 5
@@ -63,13 +65,14 @@ select vrr.bolao,
             when (vrr.resultado = ppt.time_palpite) and (binary ppt.bonus = vrr.bonus) and (binary vrr.bonus = 'OJ') then -7
             else 0
        end as bonus,	   
+	   
 	   -- Se for jogo do time do participante e ele não apostar ou apostar no outro time ele é um desonesto
 	   case when (
-	                     ((ppt.time_visitante = prt.torcedor_time) or (ppt.time_casa = prt.torcedor_time)) 
+	                     ((vrr.time_visitante = prt.torcedor_time) or (vrr.time_casa = prt.torcedor_time)) 
 	                 and ((ppt.time_palpite is null) or (ppt.time_palpite <> prt.torcedor_time))
 				  ) then 'S'
 			else 'N'
-	   end as desonesto 	
+	   end as desonesto 		   
   from Palpite ppt
   left join vw_resultados_rodada vrr on vrr.partida = ppt.partida
   join Participante prt on prt.id = ppt.participante;
