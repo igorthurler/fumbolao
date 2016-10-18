@@ -18,6 +18,9 @@ select p.bolao,
        end as bonus     
   from Partida p;
 
+create view vw_rodadas as
+select distinct bolao, rodada from vw_resultados_rodada;  
+  
 -- Resultado dos participantes por rodada
 -- O participante ganha ponto se apostou no time perdedor
 -- O bônus é dado se o time que o participante apostou perdeu de lavada
@@ -27,12 +30,14 @@ select p.bolao,
 -- Se o participante perde um ponto por partida não apostada
 create view vw_resultados_rodada_participante as
 select vrr.bolao,
-       vrr.rodada,
+       coalesce(vrr.rodada,r.rodada) as rodada,
        vrr.partida,
+	   
        prt.id as id_participante,
        prt.nome as nome_participante,
        prt.email as email_participante,
 	   prt.torcedor_time as time_participante,
+	   
 	   vrr.time_visitante as time_visitante,
 	   vrr.placar_time_visitante as placar_time_visitante,
        vrr.time_casa as time_casa, 
@@ -50,7 +55,7 @@ select vrr.bolao,
 	        /*Se o time que o participante apostou perder, ganha 1 ponto*/
 			when (vrr.resultado <> ppt.time_palpite) and (vrr.resultado <> 'EMPATE') then 1						
 			/*Se o time que o participante apostou ganhar, perde 1 ponto*/
-			when (vrr.resultado = ppt.time_palpite) and (vrr.resultado <> 'EMPATE') then -1	
+			when (vrr.resultado = ppt.time_palpite) /*and (vrr.resultado <> 'EMPATE')*/ then -1	
 			else 0
        end as pontos,
 	   
@@ -73,10 +78,12 @@ select vrr.bolao,
 				  ) then 'S'
 			else 'N'
 	   end as desonesto 		   
-  from Palpite ppt
-  left join vw_resultados_rodada vrr on vrr.partida = ppt.partida
-  join Participante prt on prt.id = ppt.participante;
-  
+
+  from Participante prt
+  join vw_rodadas r on 1 = 1
+  join vw_resultados_rodada vrr on r.rodada = vrr.rodada
+  left join Palpite ppt on vrr.partida = ppt.partida and ppt.participante = prt.id
+    
 -- Total de pontos dos participantes por rodada  
 create view vw_pontos_participante AS 
 	select rp.bolao as bolao, 
@@ -99,4 +106,4 @@ select vpp.bolao,
 	   sum(vpp.soma_total) as total
   from	vw_pontos_participante vpp  
  group by vpp.bolao, vpp.nome_participante
- order by sum(vpp.soma_total) desc, sum(vpp.soma_bonus) desc, nome_participante;
+order by sum(vpp.soma_total) desc, sum(vpp.soma_bonus) desc, nome_participante;
