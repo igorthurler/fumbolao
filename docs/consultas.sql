@@ -7,6 +7,7 @@ select p.bolao,
        p.placar_time_visitante, 
        p.time_casa, 
        p.placar_time_casa,
+	   p.finalizada,
        case when p.placar_time_visitante > p.placar_time_casa then p.time_visitante
             when p.placar_time_casa > p.placar_time_visitante then p.time_casa
             else 'EMPATE' 
@@ -44,6 +45,7 @@ select vrr.bolao,
        vrr.placar_time_casa as placar_time_casa,
        ppt.time_palpite as aposta_participante,
        vrr.resultado,
+	   vrr.finalizada,
 	   
        /*Se não for jogo do time do participante e ele não deu palpite, perde 1 ponto*/	   
        case when (((vrr.time_visitante <> prt.torcedor_time) and (vrr.time_casa <> prt.torcedor_time)) and ppt.time_palpite is null) then -1
@@ -90,6 +92,7 @@ create view vw_pontos_participante AS
 		   rp.rodada AS rodada,
 	       rp.nome_participante as nome_participante,
 	       rp.email_participante as email_participante,
+		   rp.finalizada as partida_finalizada,
 		   sum(rp.pontos) AS soma_pontos,
 		   sum(rp.bonus) AS soma_bonus,
 		   sum(rp.pontos + rp.bonus) as soma_total
@@ -106,5 +109,6 @@ select vpp.bolao,
 	   sum(vpp.soma_bonus) as bonus,
 	   sum(vpp.soma_total) as total
   from	vw_pontos_participante vpp  
+ where vpp.partida_finalizada = 1  
  group by vpp.email_participante, vpp.bolao, vpp.nome_participante
 order by sum(vpp.soma_total) desc, sum(vpp.soma_bonus) desc, nome_participante;
