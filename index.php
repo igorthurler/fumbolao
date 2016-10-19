@@ -22,6 +22,8 @@ $queryRodada->bindParam( ':bolao', $bolao, PDO::PARAM_INT );
 $queryRodada->execute();                      
 $dadosRodada = $queryRodada->fetch(PDO::FETCH_ASSOC);
 
+$rodada = isset($dadosRodada['rodada']) ? $dadosRodada['rodada']  : 0;
+
 //--------------------------------------------------
 
 //Retornar as partidas da rodada
@@ -32,7 +34,7 @@ $queryPartidas = $con->prepare("select *, TIMESTAMPDIFF(minute,now(),data_limite
                           and rodada = :rodada
                         order by id");
 $queryPartidas->bindParam( ':bolao', $bolao );
-$queryPartidas->bindParam( ':rodada', $dadosRodada['rodada'] );
+$queryPartidas->bindParam( ':rodada', $rodada );
 $queryPartidas->execute();       
               	
 $partidas = $queryPartidas->fetchAll( PDO::FETCH_ASSOC );
@@ -60,10 +62,10 @@ $partidas = $queryPartidas->fetchAll( PDO::FETCH_ASSOC );
 					<!-- 
 						Conteúdo aqui
 					-->				
-					<form action="enviar_palpite.php?bolao=<?php echo $bolao?>&rodada=<?php echo $dadosRodada['rodada']?>" method="post" id="frmPalpite">
+					<form action="enviar_palpite.php?bolao=<?php echo $bolao?>&rodada=<?php echo $rodada?>" method="post" id="frmPalpite">
 
 						<fieldset>
-							<legend><span>Rodada <?php echo $dadosRodada['rodada'] ?></span></legend>          
+							<legend><span>Rodada <?php echo $rodada ?></span></legend>          
 
 							<ul>                                      
 								
@@ -119,9 +121,9 @@ $partidas = $queryPartidas->fetchAll( PDO::FETCH_ASSOC );
 					</form>				
 				
 				</div>
-				<!-- /#content -->			
-				<?php /*include 'templates/sidebar.php';*/ ?>
-				
+				<!-- /#content		
+				<?php include 'templates/sidebar.php'; ?>
+				 -->	
 				
 			</div>
 			<!-- /#layout -->		

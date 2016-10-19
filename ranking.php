@@ -6,7 +6,7 @@ $queryBolao->execute();
 $dadosBolao = $queryBolao->fetch(PDO::FETCH_ASSOC);
 
 $bolao = isset($dadosBolao['id']) && ($dadosBolao['id'] != '') ? $dadosBolao['id'] : 0;
-$title = isset($dadosBolao['descricao']) && ($dadosBolao['descricao'] != '') ? $dadosBolao['descricao'] : 'Fumbolé”o';
+$title = isset($dadosBolao['descricao']) && ($dadosBolao['descricao'] != '') ? $dadosBolao['descricao'] : 'FumbolÃ£o';
 
 $query = $con->prepare("select descricao from Bolao where id = :bolao");
 $query->bindParam( ':bolao', $bolao, PDO::PARAM_INT );
@@ -40,12 +40,12 @@ $queryRanking->execute();
 				
 				<div id="content">				
 					<!-- 
-						ConteÃºdo aqui
+						Conte«âdo aqui
 					-->				
 			  <?php
 				if ($queryRanking != null) {
 foreach($queryRanking->fetchAll( PDO::FETCH_ASSOC ) as $ranking) {
-						echo "<li><label>{$ranking['nome_participante']} ({$ranking['total']} pts)</label></li>";
+						echo "<li><label>{$ranking['nome_participante']} ({$ranking['email_participante']} ) {$ranking['total']} pts</label></li>";
 					}
 				}
 			  ?>  				

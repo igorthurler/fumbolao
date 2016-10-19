@@ -1,0 +1,207 @@
+[03-Aug-2016 13:21:15] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR, expecting T_STRING or T_VARIABLE or '{' or '$' in /home/fumbleca/public_html/fumbolao/index.php on line 38
+[03-Aug-2016 13:22:00] PHP Warning:  Invalid argument supplied for foreach() in /home/fumbleca/public_html/fumbolao/index.php on line 84
+[07-Aug-2016 10:15:31] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[08-Aug-2016 08:09:24] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[10-Aug-2016 07:01:41] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[13-Aug-2016 04:41:02] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[13-Aug-2016 10:34:39] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[14-Aug-2016 10:41:29] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[16-Aug-2016 02:25:30] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[17-Aug-2016 03:25:34] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[18-Aug-2016 12:49:38] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[19-Aug-2016 18:40:32] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[20-Aug-2016 08:40:06] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[21-Aug-2016 04:12:59] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[25-Aug-2016 10:23:18] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[27-Aug-2016 19:36:10] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[29-Aug-2016 00:22:17] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[30-Aug-2016 07:05:05] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[30-Aug-2016 10:21:57] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[01-Sep-2016 14:29:14] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[01-Sep-2016 21:32:33] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[01-Sep-2016 22:21:27] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[04-Sep-2016 09:53:44] PHP Fatal error:  Call to undefined method PDOStatement::fetch_array() in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 93
+[04-Sep-2016 15:40:51] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[06-Sep-2016 09:05:35] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[07-Sep-2016 05:59:01] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[08-Sep-2016 12:22:35] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[08-Sep-2016 12:28:12] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[08-Sep-2016 12:33:18] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[08-Sep-2016 20:14:35] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[08-Sep-2016 20:42:27] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[09-Sep-2016 13:00:23] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/fumbleca/public_html/fumbolao/ranking.php:6
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/ranking.php(6): PDO->query('select descrica...')
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/ranking.php on line 6
+[12-Sep-2016 20:12:30] PHP Parse error:  syntax error, unexpected ')' in /home/fumbleca/public_html/fumbolao/ranking.php on line 32
+[12-Sep-2016 20:13:04] PHP Warning:  Invalid argument supplied for foreach() in /home/fumbleca/public_html/fumbolao/ranking.php on line 31
+[12-Sep-2016 20:13:36] PHP Warning:  Invalid argument supplied for foreach() in /home/fumbleca/public_html/fumbolao/ranking.php on line 31
+[12-Sep-2016 20:13:38] PHP Warning:  Invalid argument supplied for foreach() in /home/fumbleca/public_html/fumbolao/ranking.php on line 31
+[17-Sep-2016 20:45:08] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[17-Sep-2016 20:45:25] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[18-Sep-2016 03:32:50] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[18-Sep-2016 12:22:20] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[18-Sep-2016 12:22:27] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[18-Sep-2016 12:26:01] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time_palpite' cannot be null' in /home/fumbleca/public_html/fumbolao/enviar_palpite.php:80
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/enviar_palpite.php(80): PDOStatement->execute()
+#1 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/enviar_palpite.php on line 80
+[23-Sep-2016 09:12:01] PHP Parse error:  syntax error, unexpected T_STRING in /home/fumbleca/public_html/fumbolao/templates/sidebar.php on line 36
+[23-Sep-2016 09:13:12] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/fumbleca/public_html/fumbolao/templates/sidebar.php:39
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/templates/sidebar.php(39): PDOStatement->execute()
+#1 /home/fumbleca/public_html/fumbolao/index.php(123): include('/home/fumbleca/...')
+#2 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/templates/sidebar.php on line 39
+[23-Sep-2016 09:15:21] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/fumbleca/public_html/fumbolao/templates/sidebar.php:39
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/templates/sidebar.php(39): PDOStatement->execute()
+#1 /home/fumbleca/public_html/fumbolao/index.php(123): include('/home/fumbleca/...')
+#2 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/templates/sidebar.php on line 39
+[23-Sep-2016 09:19:21] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by rrp.nome_participante' at line 6' in /home/fumbleca/public_html/fumbolao/templates/sidebar.php:40
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/templates/sidebar.php(40): PDOStatement->execute()
+#1 /home/fumbleca/public_html/fumbolao/index.php(123): include('/home/fumbleca/...')
+#2 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/templates/sidebar.php on line 40
+[19-Oct-2016 12:42:29] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fumbleca_fw_bolao.vw_ranking' doesn't exist' in /home/fumbleca/public_html/fumbolao/templates/sidebar.php:12
+Stack trace:
+#0 /home/fumbleca/public_html/fumbolao/templates/sidebar.php(12): PDOStatement->execute()
+#1 /home/fumbleca/public_html/fumbolao/index.php(125): include('/home/fumbleca/...')
+#2 {main}
+  thrown in /home/fumbleca/public_html/fumbolao/templates/sidebar.php on line 12

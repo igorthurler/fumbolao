@@ -1,4 +1,8 @@
 <?php
+
+echo utf8_decode('Inscrição encerrada!!!');
+exit;
+
 include 'connection.php';
 
 $queryBolao = $con->prepare("select id, descricao from Bolao where ativo = true");
@@ -106,6 +110,7 @@ $title = isset($dadosBolao['descricao']) && ($dadosBolao['descricao'] != '') ? $
 									<option value="STL">STL</option>																																																																					
 									<option value="TEN">TEN</option>
 									<option value="WAS">WAS</option>														
+									<option value="LA">LA</option>				
 								  </select> 
 							</li>
 							<input type="submit" id="enviar" value="Cadastrar"/>
