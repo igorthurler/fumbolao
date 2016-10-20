@@ -20,7 +20,7 @@ select p.bolao,
   where p.finalizada = 1;
 
 create view vw_rodadas as
-select distinct bolao, rodada from vw_resultados_rodada;  
+select distinct bolao, rodada, finalizada from Partida; 
   
 -- Resultado dos participantes por rodada
 -- O participante ganha ponto se apostou no time perdedor
@@ -81,7 +81,7 @@ select vrr.bolao,
 	   end as desonesto 		   
 
   from Participante prt
-  join vw_rodadas r on 1 = 1
+  join vw_rodadas r on 1 = 1 and r.finalizada = 1
   join vw_resultados_rodada vrr on r.rodada = vrr.rodada
   left join Palpite ppt on vrr.partida = ppt.partida and ppt.participante = prt.id
     
