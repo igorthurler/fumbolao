@@ -16,11 +16,14 @@ select p.bolao,
             when ABS(p.placar_time_visitante - p.placar_time_casa) >= 40 then 'OJ'
             else ''
        end as bonus     
-  from Partida p
-  where p.finalizada = 1;
+  from Partida p;
 
 create view vw_rodadas as
+<<<<<<< HEAD
+select distinct bolao, rodada, finalizada from Partida;  
+=======
 select distinct bolao, rodada, finalizada from Partida; 
+>>>>>>> origin/master
   
 -- Resultado dos participantes por rodada
 -- O participante ganha ponto se apostou no time perdedor
