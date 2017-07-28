@@ -19,11 +19,7 @@ select p.bolao,
   from Partida p;
 
 create view vw_rodadas as
-<<<<<<< HEAD
-select distinct bolao, rodada, finalizada from Partida;  
-=======
 select distinct bolao, rodada, finalizada from Partida; 
->>>>>>> origin/master
   
 -- Resultado dos participantes por rodada
 -- O participante ganha ponto se apostou no time perdedor
@@ -109,6 +105,6 @@ select vpp.bolao,
 	   sum(vpp.soma_pontos) as pontos,
 	   sum(vpp.soma_bonus) as bonus,
 	   sum(vpp.soma_total) as total
-  from	vw_pontos_participante vpp  
+  from vw_pontos_participante vpp  
  group by vpp.email_participante, vpp.bolao, vpp.nome_participante
 order by sum(vpp.soma_total) desc, sum(vpp.soma_bonus) desc, nome_participante;
