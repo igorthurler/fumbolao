@@ -1,5 +1,5 @@
 insert into Partida(id,bolao,rodada,time_visitante,placar_time_visitante,time_casa,placar_time_casa,finalizada,data_limite_aposta)
-values(null,1,1,'PIT',0,'NE',0,false,'2015-09-10');
+values(null,1,1,'PIT',0,'NE',0,false,'2017-08-17 11:30:00');
 
 insert into Partida(id,bolao,rodada,time_visitante,placar_time_visitante,time_casa,placar_time_casa,finalizada,data_limite_aposta)
 values(null,1,1,'GB',0,'CHI',0,false,'2015-09-10');

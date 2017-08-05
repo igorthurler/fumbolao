@@ -45,6 +45,16 @@ $partidas = $queryPartidas->fetchAll( PDO::FETCH_ASSOC );
 <!DOCTYPE html>
 <html>
 
+<script>
+window.onload = function() {	
+    window.setInterval('atualizarTelaPrincipal()', 60000);
+};
+
+function atualizarTelaPrincipal() {
+	window.document.location.href = '';
+};
+</script>
+
 <?php include 'templates/header.php'; ?>
 	
 <body class="home blog">
